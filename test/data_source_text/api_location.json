@@ -1,0 +1,30 @@
+{
+    "results": [
+        {
+            "location": {
+                "street": {
+                    "number": 2193,
+                    "name": "Rua Paraíba "
+                },
+                "city": "Patos de Minas",
+                "state": "Rio de Janeiro",
+                "country": "Brazil",
+                "postcode": 71409,
+                "coordinates": {
+                    "latitude": "-79.7025",
+                    "longitude": "-133.8670"
+                },
+                "timezone": {
+                    "offset": "+4:30",
+                    "description": "Kabul"
+                }
+            }
+        }
+    ],
+    "info": {
+        "seed": "46161bdf3fc83d2d",
+        "results": 1,
+        "page": 1,
+        "version": "1.4"
+    }
+}
