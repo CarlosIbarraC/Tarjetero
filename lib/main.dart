@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_null_comparison
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
@@ -78,11 +80,11 @@ class MyHomePage extends StatelessWidget {
                 leading: SizedBox(
                   height: 70,
                   width: 70,
-                  // ignore: unnecessary_null_comparison
+                  
                   child: user.thumbnail == null
                       ? const Icon(Icons.image)
                       : CachedNetworkImage(
-                          imageUrl: user.thumbnail!,
+                          imageUrl: user.thumbnail,
                           progressIndicatorBuilder: (_, __, ___) =>
                               _ImageLoading(),
                           errorWidget: (_, __, ___) => const Icon(Icons.error),

@@ -1,4 +1,4 @@
-
+// ignore: depend_on_referenced_packages
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
@@ -8,6 +8,7 @@ class DbDataSource {
   static Future<DbDataSource> init() async {
     final aux = DbDataSource();
     await aux._init();
+    
     return aux;
   }
 
@@ -18,7 +19,7 @@ class DbDataSource {
     final path = join(dbPath, 'user.db');
     db = await openDatabase(path, version: 2,
         onCreate: (Database newDb, int version) async {
-          await newDb.execute('''
+      await newDb.execute('''
           CREATE TABLE user
           (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -28,7 +29,7 @@ class DbDataSource {
             thumbnail TEXT
           )
         ''');
-        });
+    });
   }
 
   Future<int> save(User toSave) {
